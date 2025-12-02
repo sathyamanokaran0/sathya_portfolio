@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sathya Manokaran</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Hover Effects */
+        .skill-card,
+        .project-card,
+        .btn,
+        .social-links a,
+        .profile-img {
+            transition: all 0.4s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px var(--accent-glow);
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px var(--accent-glow);
+        }
+        .btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+        .social-links a:hover {
+            transform: translateY(-6px) scale(1.2);
+            color: var(--accent);
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px var(--accent-glow);
+        }
+        /* Tilt 3D Effect */
+        .tilt {
+            transform-style: preserve-3d;
+            transition: transform 0.2s ease;
+        }
+        .tilt:hover {
+            transform: perspective(600px) rotateX(6deg) rotateY(-6deg) scale(1.04);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar reveal glass">
+        <a href="#home" class="logo">SATHYA MANOKARAN</a>
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <!-- Mobile Menu Button -->
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <!-- Theme Toggle Button -->
+        <div class="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </div>
+    </nav>
+    <!-- Hero-->
+    <section id="home" class="hero reveal">
+        <div class="hero-content glass">
+            <h1>AI Automation Engineer</h1>
+            <p>Build the Technology with AI</p>
+            <a href="#projects" class="btn">Explore Work</a>
+            <a href="#contact" class="btn">Hire Me</a>
+            <div class="social-links">
+                <a href="mailto:sathyamanokaran0@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope"></i></a> <a
+                    href="https://www.linkedin.com/in/sathya-manokaran-345b34296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank">
+                    <i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/sathyamanokaran0" target="_blank">
+                    <i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="hero-image tilt">
+            <img src="profile.jpg" alt="Profile" class="profile-img" />
+        </div>
+    </section>
+    <!-- ABOUT-->
+    <section id="about" class="about reveal">
+        <h2>ABOUT ME</h2>
+        <div class="about-container glass">
+            <div class="about-text">
+                <p>I'm Sathya, an aspiring <strong>AI Automation Engineer</strong> passionate about building intelligent
+                    and automated solutions that enhance digital experiences.
+                    I specialize in <strong>Python</strong>, <strong>Java</strong>, <strong>AI Automation</strong>, and
+                    <strong>Web Development</strong>. I love developing tools and systems that reduce human effort and
+                    increase efficiency using automation workflows.
+                    My goal is to craft <strong>smart applications</strong> that combine efficient functionality with
+                    modern and intuitive design.</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="skills reveal">
+        <h2> SKILLS</h2>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3> PROGRAMMING SKILLS</h3>
+                <p>Python</p>
+                <p>Java</p>
+                <p>AI Automation</p>
+                <p>Webdevelopment</p>
+                <p>MySQL</p>
+            </div>
+            <div class="skill-card reveal">
+                <i class="fa-solid fa-wrench"></i>
+                <h3> TOOLS & PLATFORMS</h3>
+                <p>VScode</p>
+                <p>Git & GitHub</p>
+                <p>Excel</p>
+                <p>N8N</p>
+                <p>Figma</p>
+            </div>
+        </div>
+    </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="projects reveal">
+        <h2>PROJECTS</h2>
+        <div class="project-grid">
+            <div class="project-card reveal">
+                <h3>Event Manangement System</h3>
+                <p>Using Webdevelopment HTML, CSS, PHP </p>
+            </div>
+        </div>
+    </section>
+    <section class="experience-section">
+        <h2>PROFESSIONAL EXPERIENCES</h2>
+        <div class="experience-container">
+            <div class="experience-card reveal">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>Data Science & Machine Learning Intern</h3>
+                <p>Infotact Solutions</p>
+                <i class="fa-regular fa-calendar"></i> Recent
+            </div>
+            <div class="experience-card reveal">
+                <i class="fa-solid fa-robot"></i>
+                <h3>AI Automation Intern</h3>
+                <p>Klariti Learning</p>
+                <span><i class="fa-regular fa-calendar"></i> Previous</span>
+            </div>
+            <div class="experience-card reveal">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>Advance Manufacturing Technology Intern</h3>
+                <p>AMTDC (IITM Research Park)</p>
+                <span><i class="fa-regular fa-calendar"></i> Previous</span>
+            </div>
+            <div class="experience-card reveal">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development Intern</h3>
+                <p>CodeBind Technologies</p>
+                <span><i class="fa-regular fa-calendar"></i> Previous</span>
+            </div>
+        </div>
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact reveal">
+            <h2>LET'S WORK TOGETHER</h2>
+            <p class="contact-subtitle">
+                I'm currently available for freelance work and full-time opportunities. Feel free to reach out!</p>
+            <div class="contact-container glass">
+                <div class="contact-card new-card">
+                    <i class="fa-solid fa-envelope contact-icon"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:sathyamanokaran0@gmail.com">sathyamanokaran0@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-card new-card">
+                    <i class="fa-brands fa-linkedin contact-icon"></i>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/sathya-manokaran-345b34296"
+                            target="_blank">Sathyamanokaran0 </a>
+                    </div>
+                </div>
+                <div class="contact-card new-card">
+                    <i class="fa-brands fa-github contact-icon"></i>
+                    <div>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/sathyamanokaran0" target="_blank">Sathyamanokaran0</a>
+                    </div>
+                </div>
+                <!-- RIGHT SIDE: Form -->
+                <form class="contact-form glass">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message <i class="fa-regular fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="social-links">
+                <a href="https://github.com/sathyamanokaran0" target="_blank">
+                    <i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sathya-manokaran-345b34296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank">
+                    <i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:sathyamanokaran0@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div>
+                <p>&copy; 2025. All rights reserved.</p>
+            </div>
+        </footer>
+        <script>
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = () => {
+                reveals.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        el.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            window.addEventListener('load', revealOnScroll);
+        </script>
+        <script src="script.js"></script>
+        <script>
+            const revealItems = document.querySelectorAll(".reveal");
+            function revealScroll() {
+                revealItems.forEach((el, index) => {
+                    const position = el.getBoundingClientRect().top;
+                    const screenPos = window.innerHeight - 120;
+                    if (position < screenPos) {
+                        setTimeout(() => {
+                            el.classList.add("active");
+                        }, index * 150);
+                    }
+                });
+            }
+            window.addEventListener("scroll", revealScroll);
+            window.addEventListener("load", revealScroll);
+        </script>
+        <script>
+            const revealElements = document.querySelectorAll(".reveal");
+            window.addEventListener("scroll", () => {
+                let trigger = window.innerHeight * 0.85;
+                revealElements.forEach(el => {
+                    let top = el.getBoundingClientRect().top;
+                    if (top < trigger) {
+                        el.classList.add("active");
+                    }
+                });
+            });
+        </script>
+</body>
+
+</html>
