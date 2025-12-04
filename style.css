@@ -39,13 +39,6 @@ body {
     text-decoration: none;
     padding-left: 2.5rem;
 }
-/* Mobile Menu */
-.menu-btn {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-}
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
@@ -62,9 +55,6 @@ body {
     }
     .nav-links.active {
         display: flex;
-    }
-    .menu-btn {
-        display: block;
     }
     nav {
         justify-content: space-between;
@@ -672,4 +662,5 @@ footer .social-links {
         padding: 1rem 1%;
         text-align: center;
     }
+
 }
