@@ -13,14 +13,6 @@
     --card: rgba(255,255,255,0.05);
 }
 
-.dark-mode {
-    --bg: #ffffff;
-    --text: #000000;
-    --accent: #005fa3;
-    --accent-glow: rgba(0,95,163,0.3);
-    --card: #f3f3f3;
-}
-
 body {
     background-color: var(--bg);
     color: var(--text);
@@ -51,12 +43,7 @@ body {
     padding-left: 2.5rem;
 }
 /* Mobile Menu */
-.menu-btn {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-}
+
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
@@ -73,9 +60,6 @@ body {
     }
     .nav-links.active {
         display: flex;
-    }
-    .menu-btn {
-        display: block;
     }
     nav {
         justify-content: space-between;
@@ -350,19 +334,6 @@ body {
         margin-bottom: 3rem;
     }
 
-    /* Theme Toggle */
-    .theme-toggle {
-        font-size: 22px;
-        cursor: pointer;
-        margin-left: 15px;
-        color: var(--accent);
-        transition: 0.3s;
-    }
-
-    .theme-toggle:hover {
-        transform: scale(1.2);
-    }
-
     /* Apply Colors */
     body {
         background: var(--bg);
@@ -385,10 +356,6 @@ body {
         color: var(--text);
     }
 
-    /* Icon Switch */
-    .theme-toggle .fa-sun {
-        color: gold;
-    }
 
     /* Glassmorphism Effect */
     .glass {
@@ -397,23 +364,10 @@ body {
         border: 1px solid rgba(255, 255, 255, 0.25);
     }
 
-    .dark-mode .glass {
-        background: rgba(255, 255, 255, 0.06);
-        border-color: rgba(255, 255, 255, 0.15);
-    }
-
     .glass:hover {
         background: rgba(255, 255, 255, 0.18);
         border-color: rgba(255, 255, 255, 0.35);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .theme-toggle i {
-        transition: transform 0.5s ease;
-    }
-
-    .theme-toggle.rotate i {
-        transform: rotate(360deg);
     }
 }
 
