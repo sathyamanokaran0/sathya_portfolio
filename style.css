@@ -6,18 +6,29 @@
 }
 /* Color */
 :root {
-    --dark-bg: #07181c;
-    --darker-bg: #050505;
-    --accent: #33394e;
-    --accent-glow: rgba(29, 111, 134, 0.4);
+    --bg: #07181c;
     --text: #dcc6c6;
+    --accent: #33394e;
+    --accent-glow: rgba(29,111,134,0.4);
+    --card: rgba(255,255,255,0.05);
 }
+
+.dark-mode {
+    --bg: #ffffff;
+    --text: #000000;
+    --accent: #005fa3;
+    --accent-glow: rgba(0,95,163,0.3);
+    --card: #f3f3f3;
+}
+
 body {
-    background-color: var(--dark-bg);
+    background-color: var(--bg);
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background 0.4s ease, color 0.4s ease;
 }
+
 /* Navigation */
 .navbar {
     position: fixed;
@@ -39,6 +50,13 @@ body {
     text-decoration: none;
     padding-left: 2.5rem;
 }
+/* Mobile Menu */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
@@ -55,6 +73,9 @@ body {
     }
     .nav-links.active {
         display: flex;
+    }
+    .menu-btn {
+        display: block;
     }
     nav {
         justify-content: space-between;
@@ -173,6 +194,21 @@ body {
 }
 
 /* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #444;
+    transform: translateY(-3px);
+}
 
 /* Skills Section */
 .skills {
@@ -313,6 +349,20 @@ body {
         padding-right: 0;
         margin-bottom: 3rem;
     }
+
+    /* Theme Toggle */
+    .theme-toggle {
+        font-size: 22px;
+        cursor: pointer;
+        margin-left: 15px;
+        color: var(--accent);
+        transition: 0.3s;
+    }
+
+    .theme-toggle:hover {
+        transform: scale(1.2);
+    }
+
     /* Apply Colors */
     body {
         background: var(--bg);
@@ -335,6 +385,11 @@ body {
         color: var(--text);
     }
 
+    /* Icon Switch */
+    .theme-toggle .fa-sun {
+        color: gold;
+    }
+
     /* Glassmorphism Effect */
     .glass {
         background: rgba(255, 255, 255, 0.12);
@@ -342,12 +397,23 @@ body {
         border: 1px solid rgba(255, 255, 255, 0.25);
     }
 
-  
+    .dark-mode .glass {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.15);
+    }
 
     .glass:hover {
         background: rgba(255, 255, 255, 0.18);
         border-color: rgba(255, 255, 255, 0.35);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .theme-toggle i {
+        transition: transform 0.5s ease;
+    }
+
+    .theme-toggle.rotate i {
+        transform: rotate(360deg);
     }
 }
 
@@ -424,21 +490,19 @@ body {
 }
 
 /* Scroll Reveal Activation */
-.about.reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.about.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* Glass hover effect */
 .about-container:hover {
     box-shadow: 0 10px 45px var(--accent-glow);
     transform: translateY(-5px);
+}
+
+/* 📱 Responsive Fix */
+@media (max-width: 768px) {
+    .about-text {
+        text-align: left;
+        font-size: 1.05rem;
+    }
 }
 
 /* CONTACT SECTION */
@@ -587,11 +651,10 @@ footer .social-links {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    footer {
-        background: var(--darker-bg);
-        padding: 1rem 1%;
-        text-align: center;
-    }
-
 }
 
+footer {
+    background: var(--darker-bg);
+    padding: 1rem 1%;
+    text-align: center;
+}
